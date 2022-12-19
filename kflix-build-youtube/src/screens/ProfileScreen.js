@@ -10,21 +10,21 @@ function ProfileScreen() {
   const user = useSelector(selectUser)
 
   return (
-    <div className='ProfileScreen'>
+    <div className='profileScreen'>
       <Nav />
-      <div className='ProfileScreen__body'>
+      <div className='profileScreen__body'>
         <h1>Edit Profile</h1>
-        <div className='ProfileScreen__info'>
+        <div className='profileScreen__info'>
           <img
             src='https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png?20201013161117'
             alt=''
           />
-          <div className='ProfileScreen__details'>
+          <div className='profileScreen__details'>
             <h2>{user.email}</h2>
-            <div className='ProfileScreen__plans'></div>
+            <div className='profileScreen__plans'></div>
             <h3>Plans</h3>
             <PlansScreen />
-            <button onClick={() => auth.signOut()} className='ProfileScreen__signOut'>
+            <button onClick={() => auth.signOut()} className='profileScreen__signOut'>
               Sign Out
             </button>
           </div>

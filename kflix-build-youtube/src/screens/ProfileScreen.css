@@ -28,20 +28,20 @@
     margin-bottom: 20px;
 }
 
-.ProfileScreen__details {
+.profileScreen__details {
     color: #fff;
     margin-left: 25px;
     flex: 1;
 }
 
-.ProfileScreen__details > h2 {
+.profileScreen__details > h2 {
  background-color: gray;
  padding: 15px;
  font-size: 15px;
  padding-left: 20px;
 }
 
-.ProfileScreen__signOut {
+.profileScreen__signOut {
     padding: 10px 20px;
     font-size: 1rem;
     margin-top: 5%;
@@ -53,11 +53,11 @@
     cursor: pointer;
 }
 
-.ProfileScreen__plans {
+.profileScreen__plans {
     margin-top: 20px;
 }
 
-.ProfileScreen__plans > h3 {
+.profileScreen__plans > h3 {
     border-bottom: 1px solid #282c2d;
     padding-bottom: 10px;
 }
