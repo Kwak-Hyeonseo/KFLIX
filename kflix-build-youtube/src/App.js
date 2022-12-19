@@ -23,7 +23,7 @@ function App() {
         console.log(userAuth)
         dispatch(
           login({
-            uid: userAuth.email,
+            uid: userAuth.uid,
             email: userAuth.email,
           }))
       } else {
