@@ -1,9 +1,9 @@
-.profileScreen {
+.ProfileScreen {
     height: 100vh;
     color: #fff;
 }
 
-.profileScreen__body {
+.ProfileScreen__body {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -13,15 +13,15 @@
     max-width: 800px;
 }
 
-.profileScreen__info {
+.ProfileScreen__info {
     display: flex;
 }
 
-.profileScreen__info > img {
+.ProfileScreen__info > img {
     height: 100px;
 }
 
-.profileScreen__body > h1 {
+.ProfileScreen__body > h1 {
     font-size: 60px;
     font-weight: 400;
     border-bottom: 1px solid #282c2d;
