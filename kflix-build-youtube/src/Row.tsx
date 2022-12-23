@@ -2,10 +2,14 @@ import axios from './axios'
 import React, { useEffect, useState } from 'react'
 import "./Row.css"
 
-function Row({ title, fetchUrl, isLargeRow = false }) {
-    const [movies, setMovies] = useState([]);
+type Rows = {title: any, fetchUrl: any, isLargeRow?: boolean | undefined;}
+type Movies = {poster_path: string, backdrop_path: string, id: number, name: string }
 
-    const base_url = "https://image.tmdb.org/t/p/original/"
+function Row({title, fetchUrl, isLargeRow = false}: Rows) {
+    const [movies, setMovies] = useState<Movies[]>([]);
+
+    const base_url: string = "https://image.tmdb.org/t/p/original/"
+    
     useEffect(() => {
         async function fetchData() {
             const request = await axios.get(fetchUrl)

@@ -5,10 +5,10 @@ const initialState = {
 };
 
 const reducers = {
-  login: (state, action) => {
+  login: (state: any, action: any) => {
     state.user = action.payload;    
   },
-  logout: (state) => {
+  logout: (state: any) => {
     state.user = null;
   }
 }
@@ -21,6 +21,6 @@ export const userSlice = createSlice({
 
 export const { login, logout } = userSlice.actions;
 
-export const selectUser = (state) => state.user.user;
+export const selectUser = (state: any) => state.user.user;
 
 export default userSlice.reducer;
