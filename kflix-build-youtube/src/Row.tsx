@@ -2,8 +2,8 @@ import axios from './axios'
 import React, { useEffect, useState } from 'react'
 import "./Row.css"
 
-type Rows = {title: any, fetchUrl: any, isLargeRow?: boolean | undefined;}
-type Movies = {poster_path: string, backdrop_path: string, id: number, name: string }
+type Rows = {title: string, fetchUrl: string, isLargeRow?: boolean}
+type Movies = {poster_path: string, backdrop_path: string, id: number, name: string}
 
 function Row({title, fetchUrl, isLargeRow = false}: Rows) {
     const [movies, setMovies] = useState<Movies[]>([]);
