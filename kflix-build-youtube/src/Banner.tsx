@@ -4,10 +4,10 @@ import axios from "./axios"
 import requests from "./Requests"
 
 
-type Movies = { backdrop_path: string, title: string, name: string, original_name: string, overview: string | undefined }
+type Movies = { backdrop_path: string, title: string, name: string, original_name: string, overview: string }
 
 function Banner() {
-    const [movie, setMovie] = useState<any | null>([]);
+    const [movie, setMovie] = useState<Movies>();
 
     useEffect(() => {
         async function fetchData() {
@@ -26,7 +26,7 @@ function Banner() {
     console.log(movie)
 
     function truncate(string: any, n: number) {
-        return string?.length > n ? string.substr(0, n - 1) + '...' : string;
+        return string?.length > n ? string.substring(0, n - 1) + '...' : string;
     }
 
     return (
