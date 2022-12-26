@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import './LoginScreen.css'
 import SignupScreen from './SignupScreen'
+
+
 function LoginScreen() {
-    const [signIn, setSignIn] = useState(false);
+    const [signIn, setSignIn] = useState<boolean>(false);
 
     return (
         <div className='LoginScreen'>

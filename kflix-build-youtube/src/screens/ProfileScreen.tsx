@@ -6,6 +6,7 @@ import { selectUser } from '../features/userSlice';
 import { auth } from '../firebase';
 import PlansScreen from './PlansScreen';
 
+
 function ProfileScreen() {
   const user = useSelector(selectUser)
 

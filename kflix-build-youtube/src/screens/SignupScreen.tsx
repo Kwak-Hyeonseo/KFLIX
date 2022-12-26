@@ -1,39 +1,39 @@
-import React, {useRef} from 'react'
+import React, { useRef } from 'react'
 import { auth } from "../firebase"
 import "./SignupScreen.css"
 
 
 function SignupScreen() {
-    const emailRef = useRef<any | null>(null);
-    const passwordRef = useRef<any | null>(null)
+    const emailRef = useRef<any>(null);
+    const passwordRef = useRef<any>(null)
 
-    const register = (e: any) => {
+    const register = (e: React.SyntheticEvent) => {
         e.preventDefault();
 
         auth.createUserWithEmailAndPassword(
             emailRef.current.value,
             passwordRef.current.value
         )
-        .then((authUser) => {
-            console.log(authUser)
-        })
-        .catch((error) => {
-            alert(error.message);
-        })
+            .then((authUser) => {
+                console.log(authUser)
+            })
+            .catch((error) => {
+                alert(error.message);
+            })
     };
-    const signIn = (e: any) => {
+    const signIn = (e: React.SyntheticEvent) => {
         e.preventDefault();
 
         auth.signInWithEmailAndPassword(
             emailRef.current.value,
             passwordRef.current.value
         )
-        .then((authUser) => {
-            console.log(authUser)
-        })
-        .catch((error) => {
-            alert(error.message);
-        })
+            .then((authUser) => {
+                console.log(authUser)
+            })
+            .catch((error) => {
+                alert(error.message);
+            })
     }
 
     return (
